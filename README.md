@@ -49,15 +49,9 @@ cd sistema-faturamento
 
 Instale as dependências:
 
-bash
-Copiar
-Editar
 pip install -r requirements.txt
 Execute o app com o Streamlit:
 
-bash
-Copiar
-Editar
 streamlit run app.py
 🔒 Acesso Seguro
 O sistema exige login e senha. Os dados de acesso estão definidos no arquivo login.py. Em produção, recomenda-se integrar com autenticação mais robusta ou sistemas externos (ex: GitHub Auth, autenticação por token, etc.).
@@ -65,23 +59,18 @@ O sistema exige login e senha. Os dados de acesso estão definidos no arquivo lo
 📦 Empacotar como EXE (opcional)
 Para transformar o app em executável .exe:
 
-bash
-Copiar
-Editar
 pip install pyinstaller
 pyinstaller --noconfirm --onefile --add-data "templates;templates" app.py
 Atenção: Streamlit é pensado para aplicações web. A versão .exe funciona com navegador local.
 
 🛠 Estrutura do Projeto
-pgsql
-Copiar
-Editar
 sistema-faturamento/
 ├── app.py
 ├── login.py
 ├── utils/
-│   ├── calculos.py
-│   └── relatorios.py
+│   ├──autenticação.py
+│   ├──faturamento.py
+│   └── excell.py
 ├── requirements.txt
 └── README.md
 📬 Contato
