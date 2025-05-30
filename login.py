@@ -1,7 +1,7 @@
 # login.py
 def validar_login(usuario, senha):
     usuarios = {
-        "cliente1": "senha123",
+        "adm": "adm001",
         "cliente2": "minhasenha"
     }
     return usuarios.get(usuario) == senha
